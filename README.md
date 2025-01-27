@@ -9,6 +9,19 @@ Reversing a array using slicing
 ```python
 array = array[::-1]
 ```
+Removing an element from an array
+```python
+popped_number  = array.pop(index) # by default it will remove last element
+```
+Insert an element into an array
+```python
+array.insert(index, element) # index has to provided for insert function, Return None so dont assign it to anything
+array.append(element) # appends at the end only, Return None so dont assign it to anything
+```
+Modifying an element in an array based on index
+```python
+array[i] = some_other_number
+```
 
 Dict
 ---
