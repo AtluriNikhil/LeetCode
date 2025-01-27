@@ -5,6 +5,10 @@ Sorting a multidimensional array
 ```python
 sorted_array = sorted(array,key=lambda x: x[column_index_that_has_to_be_sorted])
 ```
+Reversing a array using slicing
+```python
+array = array[::-1]
+```
 
 Dict
 ---
