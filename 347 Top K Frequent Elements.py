@@ -13,3 +13,22 @@ class Solution:
                 result.append(key)
 
         return result
+
+# Solution 2
+import heapq
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        freq = defaultdict(int)
+        for num in nums:
+            freq[num] = freq.get(num, 0) + 1
+        
+        pq = []
+        for key, value in freq.items():
+            pq.append((-value, key))
+        heapq.heapify(pq)
+        result = []
+        while k > 0:
+            val = heapq.heappop(pq)[1]
+            result.append(val)
+            k -= 1
+        return result
