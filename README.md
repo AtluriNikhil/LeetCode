@@ -43,6 +43,19 @@ Do this
 sorted_string = ''.join(sorted(string_value))
 ```
 
+Check if char is alphabet or numeric or alphanumeric
+```python
+char.isalnum()
+char.isalpha()
+char.isnumeric()
+```
+
+Convert char to lower or upper
+```python
+char.upper()
+char.lower()
+```
+
 Priority Queue
 ---
 
