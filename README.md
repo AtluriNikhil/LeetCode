@@ -1,3 +1,29 @@
+Techniques
+---
+
+### Preprocessing Steps:
+- Hashing
+- Sorting
+
+### Prefix Sum Array:
+The prefix sum array is an auxiliary array where each element at index `i` represents the sum of all elements from the start of the array up to index `i`.
+This method is used in problems like 
+- product of array except self.
+- sum of array except self.
+If you have an array `arr = [a0, a1, a2, ..., an-1]`, the prefix sum array `prefix_sum` is defined as:
+
+- `prefix_sum[0] = arr[0]`
+- `prefix_sum[i] = arr[0] + arr[1] + ... + arr[i]` for `i > 0`.
+
+This allows us to compute the sum of any subarray (i.e., a range of consecutive elements) efficiently.
+
+### Two Pointers:
+Often used for problems involving sorted arrays, or when you need to find pairs or subarrays that satisfy certain conditions.
+This method is used in problems like 
+- Finding two numbers that sum to a target value.
+- Removing duplicates from a sorted array.
+
+
 List
 ---
 
@@ -82,16 +108,3 @@ while pq:
     priority, task = heapq.heappop(pq)
     print(f"Priority: {priority}, Task: {task}")
 ```
-
-Techniques
----
-
-### Prefix Sum Array:
-The prefix sum array is an auxiliary array where each element at index `i` represents the sum of all elements from the start of the array up to index `i`.
-This method is used in problems like product of array except self, sum of array except self
-If you have an array `arr = [a0, a1, a2, ..., an-1]`, the prefix sum array `prefix_sum` is defined as:
-
-- `prefix_sum[0] = arr[0]`
-- `prefix_sum[i] = arr[0] + arr[1] + ... + arr[i]` for `i > 0`.
-
-This allows us to compute the sum of any subarray (i.e., a range of consecutive elements) efficiently.
