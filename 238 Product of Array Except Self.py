@@ -1,3 +1,22 @@
+# Optimal Solution
+
+class Solution(object):
+    def productExceptSelf(self, nums):
+        n = len(nums)
+        left_product = [0] * n
+        right_product = [0] * n
+        l_product = 1
+        r_product = 1
+
+        for i in range(n):
+            j = -i-1
+            left_product[i] = l_product
+            right_product[j] = r_product
+            l_product *= nums[i]
+            r_product *= nums[j]
+
+        return [left_product[i]*right_product[i] for i in range(n)]
+
 # Solution 1
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
