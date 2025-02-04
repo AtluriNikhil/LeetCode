@@ -1,5 +1,6 @@
-class MinStack:
+# Solution 1
 
+class MinStack:
     def __init__(self):
         self.stack = []
 
