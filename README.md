@@ -25,6 +25,32 @@ This method is used in problems like
 - Finding two numbers that sum to a target value.
 - Removing duplicates from a sorted array.
 
+Priority Queue
+---
+
+```python
+import heapq
+
+# Create a priority queue
+pq = []
+
+# this is min heap, if you want max heap keep the priorities with negative value
+
+# Add elements to the queue with their priorities one by one
+heapq.heappush(pq, (2, "Task 2"))
+heapq.heappush(pq, (1, "Task 1"))
+heapq.heappush(pq, (3, "Task 3"))
+
+# Else if you have an array directly do a heapify after inserting everything to priority queue
+for key, value in freq.items():
+    pq.append((-value, key))
+heapq.heapify(pq)
+
+# Pop elements from the queue in priority order
+while pq:
+    priority, task = heapq.heappop(pq)
+    print(f"Priority: {priority}, Task: {task}")
+```
 
 List
 ---
@@ -82,31 +108,4 @@ Convert char to lower or upper
 ```python
 char.upper()
 char.lower()
-```
-
-Priority Queue
----
-
-```python
-import heapq
-
-# Create a priority queue
-pq = []
-
-# this is min heap, if you want max heap keep the priorities with negative value
-
-# Add elements to the queue with their priorities one by one
-heapq.heappush(pq, (2, "Task 2"))
-heapq.heappush(pq, (1, "Task 1"))
-heapq.heappush(pq, (3, "Task 3"))
-
-# Else if you have an array directly do a heapify after inserting everything to priority queue
-for key, value in freq.items():
-    pq.append((-value, key))
-heapq.heapify(pq)
-
-# Pop elements from the queue in priority order
-while pq:
-    priority, task = heapq.heappop(pq)
-    print(f"Priority: {priority}, Task: {task}")
 ```
